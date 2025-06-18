@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -34,6 +36,7 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
   };
 
   const navItems = [
@@ -69,13 +72,16 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-all duration-300 hover:text-primary ${
+                className={`text-sm font-medium transition-all duration-300 hover:text-primary relative ${
                   activeSection === item.id 
                     ? 'text-primary' 
                     : 'text-white/80'
                 }`}
               >
                 {item.label}
+                {activeSection === item.id && (
+                  <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></div>
+                )}
               </button>
             ))}
             
@@ -89,7 +95,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleTheme}
@@ -98,11 +104,35 @@ const Header = () => {
             >
               {theme === 'dark' ? '🌙' : '☀️'}
             </button>
-            <button className="text-white/80 hover:text-primary">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white/80 hover:text-primary p-2 rounded-lg glass-card transition-all duration-300"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="glass-card rounded-lg p-4 space-y-2">
+            {navItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 hover:bg-white/10 ${
+                  activeSection === item.id 
+                    ? 'text-primary bg-white/5' 
+                    : 'text-white/80'
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {item.label}
+              </button>
+            ))}
           </div>
         </div>
       </nav>

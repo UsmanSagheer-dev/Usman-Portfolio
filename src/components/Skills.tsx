@@ -72,27 +72,27 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div 
                       key={skill.name}
-                      className="tech-icon group"
+                      className="skill-card group relative overflow-hidden"
                       style={{ animationDelay: `${skillIndex * 0.1}s` }}
                     >
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl">{skill.icon}</span>
-                          <span className="font-medium text-white">{skill.name}</span>
-                        </div>
-                        <span className="text-primary font-semibold">{skill.level}%</span>
-                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       
-                      {/* Skill Progress Bar */}
-                      <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
-                        <div 
-                          className="h-full bg-gradient-to-r from-primary to-purple-400 rounded-full transition-all duration-1000 ease-out"
-                          style={{ 
-                            width: `${skill.level}%`,
-                            transform: 'translateX(-100%)',
-                            animation: 'slideIn 1s ease-out forwards'
-                          }}
-                        ></div>
+                      <div className="relative z-10">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center space-x-3">
+                            <span className="text-3xl group-hover:scale-110 transition-transform duration-300">{skill.icon}</span>
+                            <span className="font-medium text-white group-hover:text-primary transition-colors duration-300">{skill.name}</span>
+                          </div>
+                          <span className="text-primary font-semibold text-sm">{skill.level}%</span>
+                        </div>
+                        
+                        {/* Skill Progress Bar */}
+                        <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="h-full bg-gradient-to-r from-primary to-purple-400 rounded-full transition-all duration-1000 ease-out skill-progress"
+                            style={{ width: `${skill.level}%` }}
+                          ></div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -103,7 +103,7 @@ const Skills = () => {
 
           {/* Additional Skills Note */}
           <div className="text-center mt-16 animate-on-scroll">
-            <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto">
+            <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto hover:scale-105 transition-transform duration-300">
               <h3 className="text-xl font-semibold mb-4 text-primary">Always Learning</h3>
               <p className="text-white/90 leading-relaxed">
                 Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, 
@@ -114,17 +114,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            transform: translateX(-100%);
-          }
-          to {
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
