@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Enhanced design system with modern color schemes */
 
 @layer base {
   :root {
@@ -36,15 +36,6 @@
     --ring: 263 70% 50%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 263 70% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .light {
@@ -75,15 +66,6 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 263 70% 50%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 263 70% 50%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -94,34 +76,47 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
     min-height: 100vh;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .light body {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
+  /* Enhanced glass morphism effects */
   .glass-card {
-    @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl;
+    @apply backdrop-blur-xl bg-card/30 border border-border/30 rounded-xl shadow-2xl;
     transition: all 0.3s ease;
   }
 
   .light .glass-card {
-    @apply backdrop-blur-lg bg-white/20 border border-white/30;
+    @apply backdrop-blur-xl bg-card/60 border border-border/40;
   }
 
-  .glow-text {
-    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  /* 3D Skill Cards */
+  .skill-card-3d {
+    @apply opacity-0 transform translate-y-8;
+    animation: slideInUp 0.8s ease-out forwards;
+    perspective: 1000px;
   }
 
+  .skill-card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateY(-8px);
+  }
+
+  /* Enhanced animations */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .animate-on-scroll.animate {
@@ -129,59 +124,49 @@
     transform: translateY(0);
   }
 
-  .tech-icon {
-    @apply p-4 rounded-lg glass-card hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/30;
+  /* Gradient text effects */
+  .glow-text {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
   }
 
-  .skill-card {
-    @apply p-6 rounded-lg glass-card transition-all duration-300 cursor-pointer;
-    transform-style: preserve-3d;
-  }
-
-  .skill-card:hover {
-    @apply scale-105 shadow-2xl shadow-primary/30;
-    transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
-  }
-
+  /* Progress bar animations */
   .skill-progress {
     transform: translateX(-100%);
-    animation: slideInProgress 1.5s ease-out forwards;
+    animation: slideInProgress 1.5s ease-out forwards 0.5s;
   }
 
+  /* Enhanced hover effects */
+  .tech-icon {
+    @apply p-4 rounded-xl backdrop-blur-lg bg-card/30 border border-border/30 hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-2xl;
+  }
+
+  .tech-icon:hover {
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  }
+
+  /* Project cards */
   .project-card {
-    @apply glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20;
+    @apply backdrop-blur-lg bg-card/40 border border-border/40 p-6 rounded-2xl hover:scale-105 transition-all duration-500 hover:shadow-2xl;
   }
 
+  .project-card:hover {
+    box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
+  }
+
+  /* Timeline enhancements */
   .timeline-item::before {
     content: '';
-    @apply absolute left-4 top-8 w-0.5 h-full bg-primary/30;
+    @apply absolute left-4 top-8 w-0.5 h-full bg-gradient-to-b from-primary/50 to-transparent;
   }
 
   .timeline-dot {
-    @apply absolute left-2 top-6 w-4 h-4 bg-primary rounded-full border-2 border-background animate-glow;
+    @apply absolute left-2 top-6 w-4 h-4 bg-gradient-to-r from-primary to-purple-500 rounded-full border-2 border-background animate-pulse;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
   }
-
-  /* Enhanced mobile menu animations */
-  .mobile-menu-enter {
-    @apply opacity-0 transform -translate-y-2;
-  }
-
-  .mobile-menu-enter-active {
-    @apply opacity-100 transform translate-y-0 transition-all duration-300;
-  }
-
-  .mobile-menu-exit {
-    @apply opacity-100 transform translate-y-0;
-  }
-
-  .mobile-menu-exit-active {
-    @apply opacity-0 transform -translate-y-2 transition-all duration-300;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Custom scrollbar */
@@ -190,16 +175,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.7);
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
 }
 
 /* Keyframe animations */
@@ -212,38 +197,60 @@ html {
   }
 }
 
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 50px rgba(139, 92, 246, 0.6);
   }
 }
 
-/* Light mode text adjustments */
+/* Theme transition utilities */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light mode specific adjustments */
 .light .glow-text {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-  color: hsl(var(--foreground));
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 .light .text-white {
-  @apply text-gray-800;
+  @apply text-gray-900;
 }
 
 .light .text-white\/80 {
-  @apply text-gray-600;
+  @apply text-gray-700;
 }
 
 .light .text-white\/90 {
-  @apply text-gray-700;
+  @apply text-gray-800;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  .skill-card-3d:hover {
+    transform: translateY(-4px);
+  }
 }

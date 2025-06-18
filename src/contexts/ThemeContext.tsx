@@ -29,6 +29,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) {
       setTheme(savedTheme);
+    } else {
+      // Default to user's system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
     }
   }, []);
 
@@ -36,11 +40,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     localStorage.setItem('theme', theme);
     const root = document.documentElement;
     
-    if (theme === 'light') {
-      root.classList.add('light');
-    } else {
-      root.classList.remove('light');
-    }
+    // Remove existing theme classes
+    root.classList.remove('light', 'dark');
+    
+    // Add current theme class
+    root.classList.add(theme);
+    
+    // Add smooth transition class during theme change
+    root.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    
+    // Remove transition after animation completes
+    setTimeout(() => {
+      root.style.transition = '';
+    }, 300);
   }, [theme]);
 
   const toggleTheme = () => {
