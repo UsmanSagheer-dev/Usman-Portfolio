@@ -73,11 +73,11 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-in-right">
-            Passionate about creating beautiful, functional, and user-centered digital experiences. 
-            With 1+ years of experience in web and mobile development, I bring ideas to life with code.
-          </p>
+         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-in-right">
+  Passionate about crafting beautiful, functional, and user-focused digital experiences. 
+  With over a year of hands-on experience in web and mobile development, I bring ideas to life through clean and efficient code.
+</p>
+
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in" style={{ animationDelay: '0.8s' }}>

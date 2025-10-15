@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Skills = () => {
@@ -6,35 +5,38 @@ const Skills = () => {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'HTML5', icon: '🌐', level: 95, color: 'from-orange-400 to-red-500' },
-        { name: 'CSS3', icon: '🎨', level: 90, color: 'from-blue-400 to-cyan-500' },
-        { name: 'JavaScript', icon: '⚡', level: 85, color: 'from-yellow-400 to-orange-500' },
-        { name: 'TypeScript', icon: '📘', level: 80, color: 'from-blue-500 to-indigo-600' },
-        { name: 'React.js', icon: '⚛️', level: 90, color: 'from-cyan-400 to-blue-500' },
-        { name: 'Next.js', icon: '🔺', level: 85, color: 'from-gray-700 to-gray-900' },
-        { name: 'Tailwind CSS', icon: '💨', level: 95, color: 'from-teal-400 to-cyan-500' },
+        { name: 'HTML5', icon: '/src/assets/images/htmlicon.jpg', level: 95, color: 'from-orange-400 to-red-500' },
+        { name: 'CSS3', icon: '/src/assets/images/csslogo.webp', level: 90, color: 'from-blue-400 to-cyan-500' },
+        { name: 'JavaScript', icon: '/src/assets/images/jslogo.png', level: 85, color: 'from-yellow-400 to-orange-500' },
+        { name: 'TypeScript', icon: '/src/assets/images/tslogo.jpg', level: 80, color: 'from-blue-500 to-indigo-600' },
+        { name: 'React.js', icon: '/src/assets/images/reactlogo.png', level: 90, color: 'from-cyan-400 to-blue-500' },
+        { name: 'Next.js', icon: '/src/assets/images/nextjs.png', level: 85, color: 'from-gray-700 to-gray-900' },
+        { name: 'Tailwind CSS', icon: '/src/assets/images/tailwindlogo.png', level: 95, color: 'from-teal-400 to-cyan-500' },
+        { name: 'Bootstrap CSS', icon: '/src/assets/images/bootstraplogo.png', level: 90, color: 'from-violet-400 to-purple-500' }
       ]
     },
     {
       title: 'Backend & Database',
       skills: [
-        { name: 'Firebase', icon: '🔥', level: 85, color: 'from-yellow-400 to-orange-500' },
-        { name: 'MongoDB', icon: '🍃', level: 75, color: 'from-green-400 to-emerald-500' },
-        { name: 'Node.js', icon: '🟢', level: 70, color: 'from-green-500 to-green-600' },
+        { name: 'Firebase', icon: '/src/assets/images/firebaselogo.png', level: 85, color: 'from-yellow-400 to-orange-500' },
+        { name: 'MongoDB', icon: '/src/assets/images/mongodb logo.png', level: 75, color: 'from-green-400 to-emerald-500' },
+        { name: 'Node.js', icon: '/src/assets/images/nodejs.png', level: 70, color: 'from-green-500 to-green-600' },
+        {name:'FastAPI', icon:'/src/assets/images/fastapilogo.jpg', level: 40, color: 'from-blue-400 to-blue-600' }
       ]
     },
     {
       title: 'Mobile Development',
       skills: [
-        { name: 'React Native', icon: '📱', level: 85, color: 'from-purple-400 to-purple-600' },
+        { name: 'React Native', icon: '/src/assets/images/reactnativelogo.png', level: 85, color: 'from-purple-400 to-purple-600' },
       ]
     },
     {
       title: 'Testing & Tools',
       skills: [
-        { name: 'Git', icon: '📚', level: 85, color: 'from-red-500 to-red-600' },
-        { name: 'Prismic', icon: '📝', level: 80, color: 'from-indigo-400 to-purple-500' },
-        { name: 'Cypress', icon: '🧪', level: 75, color: 'from-gray-600 to-gray-700' },
+        { name: 'Git', icon: '/src/assets/images/gitlogo.png', level: 85, color: 'from-red-500 to-red-600' },
+        { name: 'Prismic', icon: '/src/assets/images/prismiclogo.png', level: 80, color: 'from-indigo-400 to-purple-500' },
+        { name: 'GitHub', icon: '/src/assets/images/githublogo.png', level: 70, color: 'from-gray-400 to-gray-500' }
+
       ]
     }
   ];
@@ -92,9 +94,7 @@ const Skills = () => {
                           {/* Icon */}
                           <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                              <span className="text-3xl group-hover:scale-110 transition-transform duration-300">
-                                {skill.icon}
-                              </span>
+                             <img src={skill.icon} alt="" className='bg-transparent rounded-lg' />
                             </div>
                           </div>
 

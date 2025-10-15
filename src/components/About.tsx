@@ -1,5 +1,5 @@
-
-import React from 'react';
+import { IMAGES } from "@/assets/images";
+import React from "react";
 
 const About = () => {
   return (
@@ -19,9 +19,9 @@ const About = () => {
             <div className="animate-on-scroll">
               <div className="relative">
                 <div className="w-80 h-80 mx-auto glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                    alt="Usman Sagheer" 
+                  <img
+                    src={IMAGES.PortfolioImage}
+                    alt="Usman Sagheer"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -33,20 +33,34 @@ const About = () => {
             {/* About Content */}
             <div className="animate-on-scroll space-y-6">
               <div className="glass-card p-8 rounded-xl">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-primary">
+                  My Journey
+                </h3>
                 <p className="text-white/90 leading-relaxed mb-4">
-                  My development journey began with curiosity and a desire to build meaningful digital solutions. 
-                  What started as learning HTML and CSS evolved into mastering modern frameworks and technologies.
+                  Dynamic Full-Stack Developer with over 1 year of client-facing
+                  experience, specializing in the MERN stack, React Native, and
+                  Next.js (SSR). Skilled in building and delivering
+                  high-performance web and mobile applications, integrating
+                  RESTful APIs, and collaborating effectively within Agile
+                  teams. Passionate about solving complex problems and crafting
+                  seamless user experiences.
                 </p>
+
                 <p className="text-white/90 leading-relaxed mb-4">
-                  Over the past year, I've been working in a software house where I've gained hands-on experience 
-                  building real-world applications. This experience has taught me not just technical skills, but 
-                  also the importance of clean code, user experience, and collaborative development.
+                  Over the past year, I’ve worked in a software house where I’ve
+                  gained hands-on experience developing real-world applications.
+                  This journey has strengthened not only my technical expertise
+                  but also my understanding of clean code principles,
+                  user-centered design, and teamwork in collaborative
+                  environments.
                 </p>
+
                 <p className="text-white/90 leading-relaxed">
-                  I'm passionate about staying updated with the latest technologies and best practices. 
-                  Whether it's React, React Native, or exploring new tools, I love the continuous learning 
-                  that comes with being a developer.
+                  I’m deeply passionate about staying up to date with emerging
+                  technologies and industry best practices. Whether it’s React,
+                  React Native, or exploring new frameworks, I enjoy the
+                  continuous learning and innovation that come with being a
+                  developer.
                 </p>
               </div>
 
@@ -54,7 +68,7 @@ const About = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center rounded-xl hover:scale-105 transition-all duration-300">
                   <div className="text-3xl font-bold text-primary">1+</div>
-                  <div className="text-white/80">Years Experience</div>
+                  <div className="text-white/80">Year Experience</div>
                 </div>
                 <div className="glass-card p-6 text-center rounded-xl hover:scale-105 transition-all duration-300">
                   <div className="text-3xl font-bold text-primary">10+</div>
