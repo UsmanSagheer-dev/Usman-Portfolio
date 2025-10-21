@@ -1,49 +1,54 @@
-
-import React from 'react';
-import { Github, ArrowUp, ArrowDown } from 'lucide-react';
+import React from "react";
+import { Github, ArrowUp, ArrowDown } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce React App',
-      description: 'A full-featured e-commerce platform built with React.js and Firebase. Includes user authentication, product catalog, shopping cart, and payment integration.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      technologies: ['React.js', 'Firebase', 'Tailwind CSS', 'Redux'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: true
+      title: "HR Management System",
+      description:
+        "A comprehensive HR Management System built with React.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
+      image: "/src/assets/images/hrmenagement.jpg",
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
+      liveUrl: "https://hrmanagement-bn3h.vercel.app/auth/login",
+      featured: true,
     },
     {
       id: 2,
-      title: 'Task Management Mobile App',
-      description: 'A cross-platform mobile application for task management built with React Native. Features include task creation, categorization, reminders, and offline sync.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      technologies: ['React Native', 'TypeScript', 'Firebase', 'Redux'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: true
+      title: "Expense Tracker",
+      description:
+        "A modern web-based Expense Tracker that helps users manage their daily, weekly, and monthly spending. Built with React.js, it stores data securely in local storage and allows users to download detailed expense reports in PDF format. The app includes features like category-wise tracking, dynamic charts, and a clean, responsive UI for seamless use across all devices.",
+      image: "/src/assets/images/expenseimage.jpg",
+      technologies: ["React.js", "Tailwind CSS", "Local Storage", "jsPDF"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/finpal-pdf-reports",
+      liveUrl:
+        "https://finpal-pdf-reports-l-git-a717e0-learnwithusmansagheers-projects.vercel.app/",
+      featured: true,
     },
     {
       id: 3,
-      title: 'Portfolio Website with CMS',
-      description: 'A dynamic portfolio website with content management system integration using Next.js and Prismic CMS. Features server-side rendering and optimized performance.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-      technologies: ['Next.js', 'Prismic CMS', 'TypeScript', 'Tailwind CSS'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: false
+      title: "Facebook Clone",
+      description:
+        "A fully functional social media web application built with React.js, Firebase, and Redux Toolkit. It allows users to create and delete their own posts, while viewing posts from other users in real-time. The app includes user authentication, responsive design, and seamless state management for a smooth, interactive experience.",
+      image: "/src/assets/images/facebookclone.png",
+      technologies: ["React.js", "Firebase", "Redux Toolkit", "Tailwind CSS"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/Facebool-testing",
+      liveUrl: "https://facebool-testing.vercel.app/signup",
+      featured: false,
     },
     {
       id: 4,
-      title: 'Real-time Chat Application',
-      description: 'A real-time chat application with multiple rooms, file sharing, and emoji support. Built with React and Firebase for instant messaging capabilities.',
-      image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop',
-      technologies: ['React.js', 'Firebase', 'CSS3', 'JavaScript'],
-      githubUrl: '#',
-      liveUrl: '#',
-      featured: false
-    }
+      title: "Real-time Chat Application",
+      description:
+        "A real-time chat application with multiple rooms, file sharing, and emoji support. Built with React and Firebase for instant messaging capabilities.",
+      image:
+        "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
+      technologies: ["React.js", "Firebase", "CSS3", "JavaScript"],
+      githubUrl: "#",
+      liveUrl: "#",
+      featured: false,
+    },
   ];
 
   return (
@@ -57,37 +62,38 @@ const Projects = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
             <p className="text-white/80 text-lg mt-6 max-w-2xl mx-auto">
-              Here are some of my recent projects that showcase my skills and experience
+              Here are some of my recent projects that showcase my skills and
+              experience
             </p>
           </div>
 
           {/* Projects Grid */}
           <div className="space-y-12">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={project.id}
                 className={`project-card animate-on-scroll ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex flex-col md:flex gap-8 items-center`}
               >
                 {/* Project Image */}
                 <div className="md:w-1/2">
                   <div className="relative group overflow-hidden rounded-xl">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <div className="flex space-x-4">
-                        <a 
+                        <a
                           href={project.githubUrl}
                           className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
                           aria-label="View GitHub Repository"
                         >
                           <Github size={24} className="text-white" />
                         </a>
-                        <a 
+                        <a
                           href={project.liveUrl}
                           className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
                           aria-label="View Live Demo"
@@ -118,7 +124,7 @@ const Projects = () => {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech) => (
-                      <span 
+                      <span
                         key={tech}
                         className="px-4 py-2 glass-card text-sm font-medium text-primary hover:bg-primary/20 transition-all duration-300"
                       >
@@ -129,14 +135,14 @@ const Projects = () => {
 
                   {/* Project Links */}
                   <div className="flex space-x-4">
-                    <a 
+                    <a
                       href={project.githubUrl}
                       className="flex items-center space-x-2 px-6 py-3 glass-card hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                     >
                       <Github size={20} />
                       <span>Code</span>
                     </a>
-                    <a 
+                    <a
                       href={project.liveUrl}
                       className="flex items-center space-x-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                     >
@@ -152,13 +158,15 @@ const Projects = () => {
           {/* More Projects CTA */}
           <div className="text-center mt-16 animate-on-scroll">
             <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4 text-primary">Want to see more?</h3>
+              <h3 className="text-xl font-semibold mb-4 text-primary">
+                Want to see more?
+              </h3>
               <p className="text-white/90 leading-relaxed mb-6">
-                These are just a few highlights from my portfolio. I have more projects and 
-                experiments available on my GitHub profile.
+                These are just a few highlights from my portfolio. I have more
+                projects and experiments available on my GitHub profile.
               </p>
-              <a 
-                href="#"
+              <a
+                href="https://github.com/UsmanSagheer-dev"
                 className="inline-flex items-center space-x-2 px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
                 <Github size={20} />
