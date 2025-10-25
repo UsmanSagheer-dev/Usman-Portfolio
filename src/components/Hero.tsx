@@ -93,6 +93,13 @@ const Hero = () => {
             >
               Get In Touch
             </button>
+            <a
+              href="/resume.pdf"
+              download
+              className="px-8 py-4 animated-border text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              Download CV
+            </a>
           </div>
 
           {/* Scroll Indicator */}

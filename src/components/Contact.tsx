@@ -180,14 +180,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-16 animate-on-scroll">
-            <div className="glass-card p-6 rounded-xl">
-              <p className="text-white/80">
-                © 2024 Usman Sagheer. Built with React, TypeScript, and lots of ☕
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
