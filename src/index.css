@@ -133,6 +133,37 @@
     text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
   }
 
+  /* Animated Border */
+  @keyframes border-spin {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+                linear-gradient(90deg, 
+                  hsl(var(--primary)),
+                  #06b6d4,
+                  hsl(var(--primary)),
+                  #06b6d4
+                ) border-box;
+    background-size: 200% 100%;
+    animation: border-spin 3s linear infinite;
+  }
+
+  .animated-border:hover {
+    animation-duration: 1.5s;
+  }
+
   /* Progress bar animations */
   .skill-progress {
     transform: translateX(-100%);

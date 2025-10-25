@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Github, ArrowUp, ArrowDown } from "lucide-react";
 
 const Projects = () => {
+  const navigate = useNavigate();
+  
   const projects = [
     {
       id: 1,
@@ -72,9 +75,10 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className={`project-card animate-on-scroll ${
+                className={`project-card animate-on-scroll animated-border cursor-pointer ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex flex-col md:flex gap-8 items-center`}
+                onClick={() => navigate(`/project/${project.id}`)}
               >
                 {/* Project Image */}
                 <div className="md:w-1/2">
