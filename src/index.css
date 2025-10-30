@@ -133,78 +133,64 @@
     text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
   }
 
-  /* Animated Border - Moving Light Effect */
-  @keyframes border-glow {
-    0% {
-      opacity: 0;
-      offset-distance: 0%;
-    }
-    20% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      offset-distance: 100%;
-    }
-  }
-
+  /* Smooth Border Animation - Traveling Light */
   .animated-border {
     position: relative;
     border: 1px solid hsl(var(--border));
-    overflow: hidden;
   }
 
   .animated-border::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      transparent 40%, 
-      rgba(255, 255, 255, 0.8) 50%, 
-      transparent 60%, 
-      transparent 100%
+    padding: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      transparent,
+      rgba(255, 255, 255, 0.9),
+      transparent,
+      transparent
     );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background-size: 200% 200%;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: border-move 3s linear infinite;
+    animation: border-flow 4s linear infinite;
+    pointer-events: none;
   }
 
-  @keyframes border-move {
+  @keyframes border-flow {
     0% {
-      transform: translateX(-100%) translateY(-100%) rotate(0deg);
+      background-position: 200% 0;
     }
     25% {
-      transform: translateX(100%) translateY(-100%) rotate(90deg);
+      background-position: 0 0;
     }
     50% {
-      transform: translateX(100%) translateY(100%) rotate(180deg);
+      background-position: 0 200%;
     }
     75% {
-      transform: translateX(-100%) translateY(100%) rotate(270deg);
+      background-position: 200% 200%;
     }
     100% {
-      transform: translateX(-100%) translateY(-100%) rotate(360deg);
+      background-position: 200% 0;
     }
   }
 
   .light .animated-border::before {
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      transparent 40%, 
-      rgba(139, 92, 246, 0.6) 50%, 
-      transparent 60%, 
-      transparent 100%
+    background: linear-gradient(
+      90deg,
+      transparent,
+      transparent,
+      rgba(139, 92, 246, 0.7),
+      transparent,
+      transparent
     );
+    background-size: 200% 200%;
   }
 
   /* Smooth scroll for all sections */
