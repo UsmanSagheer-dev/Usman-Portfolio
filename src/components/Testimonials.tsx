@@ -109,35 +109,178 @@ const Testimonials = () => {
           Testimonials
         </h2>
         
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 testimonials-container">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="animated-border glass-card testimonial-card animate-on-scroll"
-                style={{
-                  animationDelay: testimonial.delay,
-                  transform: `rotate(${(index % 3) - 1}deg)`
-                }}
-              >
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border-2 border-primary/20">
-                      <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                      <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+        <div className="relative h-[600px] overflow-hidden">
+          <div className="flex gap-6 testimonials-scroll">
+            {/* First set of cards */}
+            <div className="flex flex-col gap-6 testimonials-column">
+              {testimonials.slice(0, 4).map((testimonial, index) => (
+                <Card
+                  key={index}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${-2 + (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-sm text-foreground/80 italic leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {testimonials.slice(0, 4).map((testimonial, index) => (
+                <Card
+                  key={`dup1-${index}`}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${-2 + (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Second set of cards */}
+            <div className="flex flex-col gap-6 testimonials-column" style={{ animationDelay: '-10s' }}>
+              {testimonials.slice(4, 8).map((testimonial, index) => (
+                <Card
+                  key={index}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${1 - (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {testimonials.slice(4, 8).map((testimonial, index) => (
+                <Card
+                  key={`dup2-${index}`}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${1 - (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Third set of cards */}
+            <div className="flex flex-col gap-6 testimonials-column" style={{ animationDelay: '-20s' }}>
+              {testimonials.slice(8, 12).map((testimonial, index) => (
+                <Card
+                  key={index}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${-1 + (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {testimonials.slice(8, 12).map((testimonial, index) => (
+                <Card
+                  key={`dup3-${index}`}
+                  className="animated-border glass-card w-[350px] flex-shrink-0"
+                  style={{
+                    transform: `rotate(${-1 + (index % 3)}deg)`
+                  }}
+                >
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border-2 border-primary/20">
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-xs text-muted-foreground/70">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
