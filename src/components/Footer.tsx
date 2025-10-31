@@ -7,17 +7,17 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/usmansagheer',
+      url: 'https://github.com/UsmanSagheer-dev',
       icon: Github,
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/usmansagheer',
+      url: 'https://www.linkedin.com/in/usmandeveloper12',
       icon: Linkedin,
     },
     {
       name: 'Email',
-      url: 'mailto:usman.sagheer@example.com',
+      url: 'mailto:usmansagheerdev@gmail.com',
       icon: Mail,
     },
   ];
@@ -82,9 +82,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 text-center animate-on-scroll">
           <p className="text-white/70 flex items-center justify-center gap-2 flex-wrap">
-            © {currentYear} Usman Sagheer. Built with 
-            <Heart size={16} className="text-red-500 animate-pulse" />
-            using React, TypeScript & Tailwind CSS
+            © {currentYear} Usman Sagheer — Crafting delightful, accessible web
+            experiences using React, TypeScript & Tailwind CSS.
           </p>
         </div>
       </div>
