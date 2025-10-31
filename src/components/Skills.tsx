@@ -76,7 +76,11 @@ const Skills = () => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                <div className={`grid gap-6 md:gap-8 ${
+                  category.skills.length === 1 
+                    ? 'grid-cols-1 max-w-md mx-auto' 
+                    : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+                }`}>
                   {category.skills.map((skill, skillIndex) => (
                     <div 
                       key={skill.name}
