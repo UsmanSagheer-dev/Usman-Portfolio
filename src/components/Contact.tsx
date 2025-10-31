@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Github, Linkedin } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,13 +23,53 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! I\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        title: 'Email not configured',
+        description:
+          'Email service is not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY in your .env',
+      });
       setIsSubmitting(false);
-    }, 1000);
+      return;
+    }
+
+    try {
+      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: publicKey,
+          template_params: {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+          },
+        }),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || 'Failed to send message');
+      }
+
+      toast({ title: "Message sent", description: "Thanks — I'll get back to you soon." });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Send message error:', error);
+      toast({ title: 'Send failed', description: 'Could not send your message. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -75,7 +117,12 @@ const Contact = () => {
                 <div className="space-y-6 mb-8">
                   <div>
                     <h4 className="font-semibold text-white mb-2">Email</h4>
-                    <p className="text-white/80">usman.sagheer@example.com</p>
+                    <p className="text-white/80">usmansagheerdev@gmail.com</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-white mb-2">Phone</h4>
+                    <p className="text-white/80">+92 304 9469130</p>
                   </div>
                   
                   <div>

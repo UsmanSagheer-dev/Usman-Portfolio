@@ -4,18 +4,18 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      year: '2022 – 2026',
+      year: '2023 – Present',
       degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Central Punjab',
+      institution: 'University of Education Lahore Faisalabad Campus',
       description: 'Pursuing a comprehensive education in computer science with focus on software engineering, data structures, algorithms, and modern web technologies. Maintaining a strong academic record while working on practical projects.',
-      courses: ['Data Structures', 'Algorithms', 'Web Development', 'Database Systems', 'Software Engineering'],
+      courses: ['Data Structures', 'Object Oriented Programing', 'Operating System', 'Advanced Database Systems', 'Software Engineering'],
       type: 'degree'
     },
     {
       id: 2,
-      year: '2020 – 2022',
+      year: '2021 – 2023',
       degree: 'Intermediate in Computer Science',
-      institution: 'Government College',
+      institution: 'AL Farooq College Multan',
       description: 'Completed intermediate education with a focus on computer science fundamentals, mathematics, and physics. Built a strong foundation in programming concepts and computational thinking.',
       courses: ['Programming Fundamentals', 'Mathematics', 'Physics', 'Computer Science'],
       type: 'intermediate'
