@@ -1,8 +1,37 @@
 import PortfolioImage from './usman.jpg'
-import BootsrapLogo from './bootstraplogo.png'
-export const IMAGES =
-{
-    PortfolioImage,
-    BootsrapLogo
+import BootstrapLogo from './bootstraplogo.png'
+import HtmlIcon from './htmlicon.jpg'
+import CssLogo from './csslogo.webp'
+import JsLogo from './jslogo.png'
+import TsLogo from './tslogo.jpg'
+import ReactLogo from './reactlogo.png'
+import NextLogo from './nextjs.png'
+import TailwindLogo from './tailwindlogo.png'
+import FirebaseLogo from './firebaselogo.png'
+import MongoDBLogo from './mongodb logo.png'
+import NodeLogo from './nodejs.png'
+import FastAPILogo from './fastapilogo.jpg'
+import ReactNativeLogo from './reactnativelogo.png'
+import GitLogo from './gitlogo.png'
+import PrismicLogo from './prismiclogo.png'
+import GitHubLogo from './githublogo.png'
 
+export const IMAGES = {
+    PortfolioImage,
+    BootstrapLogo,
+    HtmlIcon,
+    CssLogo,
+    JsLogo,
+    TsLogo,
+    ReactLogo,
+    NextLogo,
+    TailwindLogo,
+    FirebaseLogo,
+    MongoDBLogo,
+    NodeLogo,
+    FastAPILogo,
+    ReactNativeLogo,
+    GitLogo,
+    PrismicLogo,
+    GitHubLogo,
 }

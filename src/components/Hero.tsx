@@ -15,6 +15,25 @@ const Hero = () => {
     'UI/UX Enthusiast'
   ];
 
+  // Programmatic CV download for better compatibility
+  const handleDownloadCV = async () => {
+    try {
+      const response = await fetch('/UsmanSagheer.pdf');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'UsmanSagheer.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      alert('CV download failed!');
+    }
+  };
+
   useEffect(() => {
     const handleTyping = () => {
       const current = loopNum % roles.length;
@@ -93,13 +112,12 @@ const Hero = () => {
             >
               Get In Touch
             </button>
-            <a
-              href="/resume.pdf"
-              download
-              className="px-8 py-4 animated-border text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              Download CV
-            </a>
+              <button
+                onClick={handleDownloadCV}
+                className="px-8 py-4 animated-border text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+              >
+                Download CV
+              </button>
           </div>
 
           {/* Scroll Indicator */}
