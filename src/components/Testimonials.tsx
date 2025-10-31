@@ -106,7 +106,7 @@ const TestimonialCard = ({ testimonial, duplicate = false }) => {
   const lines = testimonial.content.split('. ').filter(line => line.trim());
   
   return (
-    <Card className="animated-border glass-card w-[350px] flex-shrink-0">
+    <Card className="glass-card w-[350px] flex-shrink-0">
       <CardContent className="p-6 space-y-4">
         <div className="flex items-center gap-3">
           <Avatar className="h-12 w-12 border-2 border-primary/20">
@@ -152,31 +152,25 @@ const Testimonials = () => {
             <div className="flex gap-6 testimonials-scroll justify-center items-center h-full">
             {/* First set of cards */}
             <div className="flex flex-col gap-6 testimonials-column" style={{ transform: 'rotate(-2deg)' }}>
-              {testimonials.slice(0, 4).map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} />
-              ))}
-              {testimonials.slice(0, 4).map((testimonial, index) => (
-                <TestimonialCard key={`dup1-${index}`} testimonial={testimonial} duplicate />
+              {/* Repeat cards 3 times for smooth infinite scroll */}
+              {[...testimonials.slice(0, 4), ...testimonials.slice(0, 4), ...testimonials.slice(0, 4)].map((testimonial, index) => (
+                <TestimonialCard key={`col1-${index}`} testimonial={testimonial} />
               ))}
             </div>
 
             {/* Second set of cards - Reverse direction */}
             <div className="flex flex-col gap-6 testimonials-column-reverse" style={{ animationDelay: '-10s', transform: 'rotate(2deg)' }}>
-              {testimonials.slice(4, 8).map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} />
-              ))}
-              {testimonials.slice(4, 8).map((testimonial, index) => (
-                <TestimonialCard key={`dup2-${index}`} testimonial={testimonial} duplicate />
+              {/* Repeat cards 3 times for smooth infinite scroll */}
+              {[...testimonials.slice(4, 8), ...testimonials.slice(4, 8), ...testimonials.slice(4, 8)].map((testimonial, index) => (
+                <TestimonialCard key={`col2-${index}`} testimonial={testimonial} />
               ))}
             </div>
 
             {/* Third set of cards */}
             <div className="flex flex-col gap-6 testimonials-column" style={{ animationDelay: '-20s', transform: 'rotate(-2deg)' }}>
-              {testimonials.slice(8, 12).map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} />
-              ))}
-              {testimonials.slice(8, 12).map((testimonial, index) => (
-                <TestimonialCard key={`dup3-${index}`} testimonial={testimonial} duplicate />
+              {/* Repeat cards 3 times for smooth infinite scroll */}
+              {[...testimonials.slice(8, 12), ...testimonials.slice(8, 12), ...testimonials.slice(8, 12)].map((testimonial, index) => (
+                <TestimonialCard key={`col3-${index}`} testimonial={testimonial} />
               ))}
             </div>
           </div>
