@@ -163,20 +163,6 @@ const ProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Video Section */}
-              <div className="mb-12 animate-fade-in animated-border rounded-xl overflow-hidden">
-                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={project.videoUrl}
-                    title={`${project.title} Demo`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-
               {/* Project Details */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 {/* Full Description */}
