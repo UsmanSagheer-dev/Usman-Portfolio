@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/components/Header";
+import { IMAGES } from '@/assets/images';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const ProjectDetail = () => {
         "A comprehensive HR Management System built with React.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
       fullDescription:
         "This HR Management System is a full-stack web application designed to help organizations manage their human resources more effectively. The system includes modules for employee management, attendance tracking, leave management, and payroll processing. Built with modern technologies like Next.js and MongoDB, it provides a scalable and efficient solution for HR departments. The application features a clean, intuitive interface that makes it easy for HR staff to perform their daily tasks. It includes role-based access control, ensuring that sensitive employee data is protected. The system also generates detailed reports and analytics to help management make informed decisions.",
-      image: "/src/assets/images/hrmenagement.jpg",
+  image: IMAGES.HrManagementImage,
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
       githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
       liveUrl: "https://hrmanagement-bn3h.vercel.app/auth/login",
@@ -37,7 +38,7 @@ const ProjectDetail = () => {
         "A modern web-based Expense Tracker that helps users manage their daily, weekly, and monthly spending. Built with React.js, it stores data securely in local storage and allows users to download detailed expense reports in PDF format.",
       fullDescription:
         "The Expense Tracker is a comprehensive financial management tool designed to help users keep track of their spending habits. The application allows users to categorize expenses, view spending trends through interactive charts, and download detailed reports. Built with React.js and leveraging local storage for data persistence, the app works offline and ensures user privacy. The clean, responsive UI adapts seamlessly to different devices, making it easy to track expenses on the go. Users can set budgets, receive alerts when approaching limits, and analyze their spending patterns over time.",
-      image: "/src/assets/images/expenseimage.jpg",
+  image: IMAGES.ExpenseImage,
       technologies: ["React.js", "Tailwind CSS", "Local Storage", "jsPDF"],
       githubUrl: "https://github.com/UsmanSagheer-dev/finpal-pdf-reports",
       liveUrl:
@@ -59,7 +60,7 @@ const ProjectDetail = () => {
         "A fully functional social media web application built with React.js, Firebase, and Redux Toolkit. It allows users to create and delete their own posts, while viewing posts from other users in real-time.",
       fullDescription:
         "This Facebook Clone is a feature-rich social media platform that demonstrates modern web development practices. Built with React.js and Firebase, it provides real-time data synchronization and user authentication. Users can create posts, upload images, and interact with content from other users. The application uses Redux Toolkit for state management, ensuring smooth and predictable state updates. Firebase handles authentication, database operations, and file storage, making the app scalable and performant. The responsive design ensures a great user experience across all devices.",
-      image: "/src/assets/images/facebookclone.png",
+  image: IMAGES.FacebookCloneImage,
       technologies: ["React.js", "Firebase", "Redux Toolkit", "Tailwind CSS"],
       githubUrl: "https://github.com/UsmanSagheer-dev/Facebool-testing",
       liveUrl: "https://facebool-testing.vercel.app/signup",

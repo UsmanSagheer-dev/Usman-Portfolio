@@ -15,6 +15,9 @@ import ReactNativeLogo from './reactnativelogo.png'
 import GitLogo from './gitlogo.png'
 import PrismicLogo from './prismiclogo.png'
 import GitHubLogo from './githublogo.png'
+import HrManagementImage from './hrmenagement.jpg'
+import ExpenseImage from './expenseimage.jpg'
+import FacebookCloneImage from './facebookclone.png'
 
 export const IMAGES = {
     PortfolioImage,
@@ -34,4 +37,7 @@ export const IMAGES = {
     GitLogo,
     PrismicLogo,
     GitHubLogo,
+    HrManagementImage,
+    ExpenseImage,
+    FacebookCloneImage,
 }

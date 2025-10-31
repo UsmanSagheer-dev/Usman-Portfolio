@@ -3,42 +3,24 @@ import React from 'react';
 
 const Experience = () => {
   const experiences = [
-    {
-      id: 1,
-      year: '2023 - Present',
-      title: 'Full-Stack Developer',
-      company: 'Software House',
-      description: 'Working on various client projects, developing web and mobile applications using React.js, React Native, and modern development practices. Collaborating with design and backend teams to deliver high-quality solutions.',
-      technologies: ['React.js', 'React Native', 'TypeScript', 'Firebase', 'MongoDB'],
-      type: 'work'
-    },
-    {
-      id: 2,
-      year: '2023',
-      title: 'Advanced React & Mobile Development',
-      company: 'Self-Learning',
-      description: 'Deepened knowledge in React ecosystem, learned React Native for mobile development, and explored state management patterns with Redux. Built several personal projects to solidify understanding.',
-      technologies: ['React Native', 'Redux', 'TypeScript', 'Mobile Development'],
-      type: 'learning'
-    },
-    {
-      id: 3,
-      year: '2022',
-      title: 'Frontend Specialization',
-      company: 'Self-Learning',
-      description: 'Focused on mastering modern CSS frameworks, JavaScript ES6+, and React.js fundamentals. Started building responsive web applications and learning about user experience principles.',
-      technologies: ['React.js', 'Tailwind CSS', 'JavaScript ES6+', 'Responsive Design'],
-      type: 'learning'
-    },
-    {
-      id: 4,
-      year: '2021',
-      title: 'Web Development Foundations',
-      company: 'Self-Learning',
-      description: 'Started my journey into web development, learning HTML5, CSS3, and JavaScript basics. Built first static websites and discovered passion for creating digital experiences.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Git'],
-      type: 'learning'
-    }
+{
+id: 1,
+year: 'April 2025 – Oct 2025',
+title: 'Full Stack Developer',
+company: 'Techloset Solution',
+description: 'Integrated Stripe in the flagship product Tradala. Improved UI and connected backend APIs in Techloset My Profile (Web & Mobile). Added features, resolved bugs in Admin Panel, and developed UI components for Tracker System. Also worked on backend API development using FastAPI for internal microservices.',
+technologies: ['React.js', 'Node.js', 'FastAPI', 'MongoDB',,'SQl', 'Redux', 'Git'],
+type: 'work'
+},
+{
+id: 2,
+year: 'Jan 2025 – April 2025',
+title: 'MERN Stack Intern',
+company: 'Techloset Solution',
+description: 'Built full-stack apps using MongoDB, Express.js, React, and Node.js. Developed REST APIs, implemented CRUD operations, and managed state with Redux / Context API. Implemented JWT Authentication and deployed projects on Netlify and Vercel.',
+technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Redux'],
+type: 'work'
+}
   ];
 
   return (

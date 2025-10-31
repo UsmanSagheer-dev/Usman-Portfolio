@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Github, ArrowUp, ArrowDown } from "lucide-react";
+import { IMAGES } from '@/assets/images';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Projects = () => {
       title: "HR Management System",
       description:
         "A comprehensive HR Management System built with React.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
-      image: "/src/assets/images/hrmenagement.jpg",
+      image: IMAGES.HrManagementImage,
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
       githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
       liveUrl: "https://hrmanagement-bn3h.vercel.app/auth/login",
@@ -22,7 +23,7 @@ const Projects = () => {
       title: "Expense Tracker",
       description:
         "A modern web-based Expense Tracker that helps users manage their daily, weekly, and monthly spending. Built with React.js, it stores data securely in local storage and allows users to download detailed expense reports in PDF format. The app includes features like category-wise tracking, dynamic charts, and a clean, responsive UI for seamless use across all devices.",
-      image: "/src/assets/images/expenseimage.jpg",
+  image: IMAGES.ExpenseImage,
       technologies: ["React.js", "Tailwind CSS", "Local Storage", "jsPDF"],
       githubUrl: "https://github.com/UsmanSagheer-dev/finpal-pdf-reports",
       liveUrl:
@@ -34,7 +35,7 @@ const Projects = () => {
       title: "Facebook Clone",
       description:
         "A fully functional social media web application built with React.js, Firebase, and Redux Toolkit. It allows users to create and delete their own posts, while viewing posts from other users in real-time. The app includes user authentication, responsive design, and seamless state management for a smooth, interactive experience.",
-      image: "/src/assets/images/facebookclone.png",
+  image: IMAGES.FacebookCloneImage,
       technologies: ["React.js", "Firebase", "Redux Toolkit", "Tailwind CSS"],
       githubUrl: "https://github.com/UsmanSagheer-dev/Facebool-testing",
       liveUrl: "https://facebool-testing.vercel.app/signup",
