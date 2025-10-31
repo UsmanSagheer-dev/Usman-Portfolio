@@ -151,7 +151,7 @@ const Testimonials = () => {
         <div className="relative h-[600px] overflow-hidden">
             <div className="flex gap-6 testimonials-scroll justify-center items-center h-full">
             {/* First set of cards */}
-            <div className="flex flex-col  gap-6 testimonials-column" style={{ transform: 'rotate(-2deg)' }}>
+            <div className="flex flex-col gap-6 testimonials-column" style={{ transform: 'rotate(-2deg)' }}>
               {testimonials.slice(0, 4).map((testimonial, index) => (
                 <TestimonialCard key={index} testimonial={testimonial} />
               ))}
@@ -160,8 +160,8 @@ const Testimonials = () => {
               ))}
             </div>
 
-            {/* Second set of cards */}
-            <div className="flex flex-col gap-6 testimonials-column" style={{ animationDelay: '-10s', transform: 'rotate(2deg)' }}>
+            {/* Second set of cards - Reverse direction */}
+            <div className="flex flex-col gap-6 testimonials-column-reverse" style={{ animationDelay: '-10s', transform: 'rotate(2deg)' }}>
               {testimonials.slice(4, 8).map((testimonial, index) => (
                 <TestimonialCard key={index} testimonial={testimonial} />
               ))}
