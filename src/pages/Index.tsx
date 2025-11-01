@@ -11,6 +11,8 @@ import Projects from '../components/Projects';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Testimonials from '../components/Testimonials';
+import Pricing from '../components/Pricing';
+import WorkProcess from '../components/WorkProcess';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -31,6 +33,8 @@ const Index = () => {
           <Experience />
           <Education />
           <Testimonials />
+          <Pricing />
+          <WorkProcess />
           <Contact />
         </main>
         <Footer />
