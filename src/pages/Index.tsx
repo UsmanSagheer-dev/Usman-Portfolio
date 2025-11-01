@@ -13,6 +13,9 @@ import Education from '../components/Education';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 import WorkProcess from '../components/WorkProcess';
+import FAQ from '../components/FAQ';
+import CTA from '../components/CTA';
+import FreeConsultation from '../components/FreeConsultation';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -35,6 +38,9 @@ const Index = () => {
           <Testimonials />
           <Pricing />
           <WorkProcess />
+          <FAQ />
+          <CTA />
+          <FreeConsultation />
           <Contact />
         </main>
         <Footer />
