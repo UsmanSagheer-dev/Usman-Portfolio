@@ -60,7 +60,7 @@ const Projects = () => {
       image: IMAGES.LifeImage,
       technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
       githubUrl: "https://github.com/UsmanSagheer-dev/lifemsync",
-      liveUrl: "https://lifemsync.vercel.app/vision",
+      liveUrl: "https://lifemsync.vercel.app",
       featured: false,
     },
   ];
