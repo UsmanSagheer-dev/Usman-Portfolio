@@ -1,17 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Github, ArrowUp, ArrowDown } from "lucide-react";
-import { IMAGES } from '@/assets/images';
+import { IMAGES } from "@/assets/images";
 
 const Projects = () => {
   const navigate = useNavigate();
-  
+
   const projects = [
     {
       id: 1,
       title: "HR Management System",
       description:
-        "A comprehensive HR Management System built with React.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
+        "A comprehensive HR Management System built with Next.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
       image: IMAGES.HrManagementImage,
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
       githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Expense Tracker",
       description:
         "A modern web-based Expense Tracker that helps users manage their daily, weekly, and monthly spending. Built with React.js, it stores data securely in local storage and allows users to download detailed expense reports in PDF format. The app includes features like category-wise tracking, dynamic charts, and a clean, responsive UI for seamless use across all devices.",
-  image: IMAGES.ExpenseImage,
+      image: IMAGES.ExpenseImage,
       technologies: ["React.js", "Tailwind CSS", "Local Storage", "jsPDF"],
       githubUrl: "https://github.com/UsmanSagheer-dev/finpal-pdf-reports",
       liveUrl:
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Facebook Clone",
       description:
         "A fully functional social media web application built with React.js, Firebase, and Redux Toolkit. It allows users to create and delete their own posts, while viewing posts from other users in real-time. The app includes user authentication, responsive design, and seamless state management for a smooth, interactive experience.",
-  image: IMAGES.FacebookCloneImage,
+      image: IMAGES.FacebookCloneImage,
       technologies: ["React.js", "Firebase", "Redux Toolkit", "Tailwind CSS"],
       githubUrl: "https://github.com/UsmanSagheer-dev/Facebool-testing",
       liveUrl: "https://facebool-testing.vercel.app/signup",
@@ -43,14 +43,24 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Real-time Chat Application",
+      title: "Pet Adoption App",
       description:
-        "A real-time chat application with multiple rooms, file sharing, and emoji support. Built with React and Firebase for instant messaging capabilities.",
-      image:
-        "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
-      technologies: ["React.js", "Firebase", "CSS3", "JavaScript"],
-      githubUrl: "#",
+        "A pet adoption platform that helps shelters list pets and connect them with loving homes. Built with React and Firebase for storage, authentication, and image uploads.",
+      image: IMAGES.PetImage,
+      technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/petadoptionApp",
       liveUrl: "#",
+      featured: false,
+    },
+     {
+      id: 5,
+      title: "Life Management App",
+      description:
+        "A life management application that helps users track their daily tasks, set goals, and manage their time effectively. Built with React and Firebase for real-time data synchronization.",
+      image: IMAGES.LifeImage,
+      technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/lifemsync",
+      liveUrl: "https://lifemsync.vercel.app/vision",
       featured: false,
     },
   ];

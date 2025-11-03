@@ -36,32 +36,10 @@ const About = () => {
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
                   My Journey
                 </h3>
-                <p className="text-white/90 leading-relaxed mb-4">
-                  Dynamic Full-Stack Developer with over 1 year of client-facing
-                  experience, specializing in the MERN stack, React Native, and
-                  Next.js (SSR). Skilled in building and delivering
-                  high-performance web and mobile applications, integrating
-                  RESTful APIs, and collaborating effectively within Agile
-                  teams. Passionate about solving complex problems and crafting
-                  seamless user experiences.
-                </p>
-
-                <p className="text-white/90 leading-relaxed mb-4">
-                  Over the past year, I’ve worked in a software house where I’ve
-                  gained hands-on experience developing real-world applications.
-                  This journey has strengthened not only my technical expertise
-                  but also my understanding of clean code principles,
-                  user-centered design, and teamwork in collaborative
-                  environments.
-                </p>
-
                 <p className="text-white/90 leading-relaxed">
-                  I’m deeply passionate about staying up to date with emerging
-                  technologies and industry best practices. Whether it’s React,
-                  React Native, or exploring new frameworks, I enjoy the
-                  continuous learning and innovation that come with being a
-                  developer.
+                  I’m a Full-Stack Developer experienced in React.js, Next.js, React Native, Node.js and MongoDB. I’ve worked on real-world client projects in a software house where I focused on building clean, user-friendly and scalable applications. I enjoy solving problems, improving UI/UX, and continuously learning new technologies to grow as a developer.
                 </p>
+
               </div>
 
               {/* Stats */}
