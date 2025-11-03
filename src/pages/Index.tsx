@@ -1,24 +1,23 @@
-
-import React from 'react';
-import { ThemeProvider } from '../contexts/ThemeContext';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Services from '../components/Services';
-import Projects from '../components/Projects';
-import Experience from '../components/Experience';
-import Education from '../components/Education';
-import Testimonials from '../components/Testimonials';
-import Pricing from '../components/Pricing';
-import WorkProcess from '../components/WorkProcess';
-import FAQ from '../components/FAQ';
-import CTA from '../components/CTA';
-import FreeConsultation from '../components/FreeConsultation';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
+import React from "react";
+import { ThemeProvider } from "../contexts/ThemeContext";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Services from "../components/Services";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import Testimonials from "../components/Testimonials";
+import Pricing from "../components/Pricing";
+import WorkProcess from "../components/WorkProcess";
+import FAQ from "../components/FAQ";
+import CTA from "../components/CTA";
+import FreeConsultation from "../components/FreeConsultation";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const Index = () => {
   useScrollAnimation();
@@ -30,17 +29,18 @@ const Index = () => {
         <main>
           <Hero />
           <About />
-          <Skills />
-          <Services />
           <Projects />
+          <Services />
+          <Skills />
           <Experience />
           <Education />
-          <Testimonials />
-          <Pricing />
+         
           <WorkProcess />
+          <Pricing />
           <FAQ />
-          <CTA />
+          {/* <CTA /> */}
           <FreeConsultation />
+           <Testimonials />
           <Contact />
         </main>
         <Footer />

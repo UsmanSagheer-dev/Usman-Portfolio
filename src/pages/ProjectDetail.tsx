@@ -14,7 +14,7 @@ const ProjectDetail = () => {
       id: "1",
       title: "HR Management System",
       description:
-        "A comprehensive HR Management System built with React.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
+        "A comprehensive HR Management System built with Next.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
       fullDescription:
         "This HR Management System is a full-stack web application designed to help organizations manage their human resources more effectively. The system includes modules for employee management, attendance tracking, leave management, and payroll processing. Built with modern technologies like Next.js and MongoDB, it provides a scalable and efficient solution for HR departments. The application features a clean, intuitive interface that makes it easy for HR staff to perform their daily tasks. It includes role-based access control, ensuring that sensitive employee data is protected. The system also generates detailed reports and analytics to help management make informed decisions.",
   image: IMAGES.HrManagementImage,
@@ -76,24 +76,44 @@ const ProjectDetail = () => {
     },
     {
       id: "4",
-      title: "Real-time Chat Application",
+      title: "Pet Adoption App",
       description:
-        "A real-time chat application with multiple rooms, file sharing, and emoji support. Built with React and Firebase for instant messaging capabilities.",
+        "A pet adoption platform that helps shelters list pets and connect them with loving homes. Built with React and Firebase for storage, authentication, and image uploads.",
       fullDescription:
-        "This Real-time Chat Application showcases the power of modern web technologies in creating instant communication platforms. Built with React and Firebase, it provides seamless real-time messaging with support for multiple chat rooms, file sharing, and emoji reactions. The application uses Firebase's real-time database to ensure messages are delivered instantly. Users can create private or public chat rooms, share files, and customize their chat experience. The clean interface and smooth animations make chatting enjoyable and intuitive.",
-      image:
-        "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
-      technologies: ["React.js", "Firebase", "CSS3", "JavaScript"],
-      githubUrl: "#",
+        "The Pet Adoption App is a user-friendly platform that connects shelters and adopters. Built with React and Firebase, it allows shelters to create and manage pet listings with photos and details. Prospective adopters can browse, filter, and favorite pets, submit adoption requests, and contact shelters directly. The app includes image uploads, responsive UI, and admin tools for managing listings and applications. It demonstrates CRUD operations, user authentication, and file storage using Firebase.",
+      image: IMAGES.PetImage,
+      technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/petadoptionApp",
       liveUrl: "#",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       features: [
-        "Real-time Messaging - Instant message delivery with Firebase",
-        "Multiple Chat Rooms - Create and join different chat rooms",
-        "File Sharing - Share images and documents",
-        "Emoji Support - Express yourself with emojis",
-        "User Presence - See who's online in real-time",
-        "Message History - Access previous conversations",
+        "Pet Listings - Add, edit, and view detailed pet profiles with photos",
+        "Search & Filters - Find pets by type, age, size, and location",
+        "Adoption Requests - Submit and manage adoption applications",
+        "Image Uploads - Upload photos for each pet using Firebase Storage",
+        "Favorites - Save pets to a favorites list for later",
+        "Admin Dashboard - Manage listings and review applications",
+      ],
+    },
+    {
+      id: "5",
+      title: "Life Management App",
+      description:
+        "An all-in-one life management app built in React.js that helps users manage tasks, habits, finances, schedules and more. Includes a dedicated University Dashboard for students. Currently runs locally (no authentication) and has a backend tier ready to be integrated.",
+      fullDescription:
+        "The Life Management App is a comprehensive, modular React application designed to help users organize everyday life and long-term goals. It combines task & habit tracking, simple finance tracking, schedule and calendar management, and goal analytics into one responsive UI. Students get a separate University Dashboard to manage courses, assignments, timetables, and grades. At present the app runs in a local-first mode (no authentication required for quick testing); the backend tier has been implemented and is ready to be integrated to enable persistent storage, authentication, and multi-device sync. The project demonstrates complex state management, reusable components, and clean separation between frontend and backend.",
+      image: IMAGES.LifeImage,
+      technologies: ["React.js", "Tailwind CSS", "Local Storage", "JavaScript"],
+      githubUrl: "https://github.com/UsmanSagheer-dev/lifemsync",
+      liveUrl: "https://lifemsync.vercel.app",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      features: [
+        "Task & Habit Management - Create, edit, and track daily tasks and habits",
+        "University Dashboard - Course, assignment, timetable and grade tracking",
+        "Finance Tracker - Simple income/expense tracking and budgeting",
+        "Local-first Mode - Runs locally without authentication for quick testing",
+        "Backend Ready - Backend tier implemented and waiting integration",
+        "Modular Components - Reusable UI components for scalability",
       ],
     },
   ];

@@ -92,36 +92,35 @@
 
 @layer components {
   /* Enhanced glass morphism effects */
-  .glass-card {
-    @apply backdrop-blur-xl bg-card/30 border border-border/30 rounded-xl shadow-2xl;
-    transition: all 0.3s ease;
-  }
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-  .light .glass-card {
-    @apply backdrop-blur-xl bg-card/60 border border-border/40;
-  }
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-  /* 3D Skill Cards */
-  .skill-card-3d {
-    @apply opacity-0 transform translate-y-8;
-    animation: slideInUp 0.8s ease-out forwards;
-    perspective: 1000px;
-  }
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-  .skill-card-3d:hover {
-    transform: rotateY(5deg) rotateX(5deg) translateY(-8px);
-  }
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 98%;
 
-  /* Enhanced animations */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-  .animate-on-scroll.animate {
-    opacity: 1;
-    transform: translateY(0);
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Use a slightly darker border/input color in light mode so inputs are visible on white backgrounds */
+    --border: 220 14% 85%;
+    --input: 220 14% 85%;
+    --ring: 263 70% 50%;
   }
 
   /* Gradient text effects */

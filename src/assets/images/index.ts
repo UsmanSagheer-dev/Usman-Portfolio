@@ -18,6 +18,8 @@ import GitHubLogo from './githublogo.png'
 import HrManagementImage from './hrmenagement.jpg'
 import ExpenseImage from './expenseimage.jpg'
 import FacebookCloneImage from './facebookclone.png'
+import PetImage from './petimage.png'
+import LifeImage from './lifeimage.png'
 
 export const IMAGES = {
     PortfolioImage,
@@ -40,4 +42,6 @@ export const IMAGES = {
     HrManagementImage,
     ExpenseImage,
     FacebookCloneImage,
+    PetImage,
+    LifeImage,
 }
