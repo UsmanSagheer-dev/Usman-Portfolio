@@ -20,7 +20,7 @@ const ProjectDetail = () => {
   image: IMAGES.HrManagementImage,
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
       githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
-      liveUrl: "https://hrmanagement-bn3h.vercel.app/auth/login",
+      liveUrl: "https://hrmanagement-i6491tv26-learnwithusmansagheers-projects.vercel.app",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       features: [
         "Employee Management - Add, edit, and manage employee records",
