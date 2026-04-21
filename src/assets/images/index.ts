@@ -1,4 +1,4 @@
-import PortfolioImage from './usman.jpg'
+import PortfolioImage from './usman.png'
 import BootstrapLogo from './bootstraplogo.png'
 import HtmlIcon from './htmlicon.jpg'
 import CssLogo from './csslogo.webp'

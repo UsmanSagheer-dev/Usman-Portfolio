@@ -22,7 +22,7 @@ const About = () => {
                   <img
                     src={IMAGES.PortfolioImage}
                     alt="Usman Sagheer"
-                    className="w-full h-full object-cover"
+                    className=" object-center"
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full animate-pulse"></div>

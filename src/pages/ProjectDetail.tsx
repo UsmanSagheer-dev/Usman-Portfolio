@@ -186,7 +186,7 @@ const ProjectDetail = () => {
               {/* Project Details */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 {/* Full Description */}
-                <div className="glass-card p-8 rounded-xl animate-fade-in animated-border">
+                <div className="glass-card p-8 rounded-xl animate-fade-in border border-white/30">
                   <h2 className="text-2xl font-bold mb-4 text-primary">
                     About This Project
                   </h2>
@@ -196,7 +196,7 @@ const ProjectDetail = () => {
                 </div>
 
                 {/* Technologies Used */}
-                <div className="glass-card p-8 rounded-xl animate-fade-in animated-border">
+                <div className="glass-card p-8 rounded-xl animate-fade-in border border-white/30">
                   <h2 className="text-2xl font-bold mb-4 text-primary">
                     Technologies Used
                   </h2>
@@ -204,7 +204,7 @@ const ProjectDetail = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-4 py-2 glass-card text-sm font-medium text-primary hover:bg-primary/20 transition-all duration-300 animated-border"
+                        className="px-4 py-2 glass-card text-sm font-medium text-primary hover:bg-primary/20 transition-all duration-300 border border-white/30 rounded-lg"
                       >
                         {tech}
                       </span>
@@ -214,7 +214,7 @@ const ProjectDetail = () => {
               </div>
 
               {/* Features */}
-              <div className="glass-card p-8 rounded-xl animate-fade-in animated-border">
+              <div className="glass-card p-8 rounded-xl animate-fade-in border border-white/30">
                 <h2 className="text-2xl font-bold mb-6 text-primary">
                   Key Features
                 </h2>
@@ -222,7 +222,7 @@ const ProjectDetail = () => {
                   {project.features.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex items-start space-x-3 p-4 glass-card rounded-lg hover:bg-white/10 transition-all duration-300 animated-border"
+                      className="flex items-start space-x-3 p-4 glass-card rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/30"
                     >
                       <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                       <p className="text-foreground/90">{feature}</p>
