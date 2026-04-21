@@ -86,7 +86,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className={`project-card animate-on-scroll animated-border cursor-pointer ${
+                className={`project-card animate-on-scroll border border-white/30 cursor-pointer ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex flex-col md:flex gap-8 items-center`}
                 onClick={() => navigate(`/project/${project.id}`)}

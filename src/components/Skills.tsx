@@ -88,7 +88,7 @@ const Skills = () => {
                       style={{ animationDelay: `${skillIndex * 0.1}s` }}
                     >
                       {/* Glass Card */}
-                      <div className="relative h-full p-6 rounded-2xl backdrop-blur-lg bg-card/50 border border-border/50 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 animated-border">
+                      <div className="relative h-full p-6 rounded-2xl backdrop-blur-lg bg-card/50 border  shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2  border-white/30">
                         {/* Gradient Overlay */}
                         <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
                         
