@@ -14,7 +14,6 @@ const Hero = () => {
     "UI/UX Enthusiast",
   ];
 
-  // Programmatic CV download for better compatibility
   const handleDownloadCV = async () => {
     try {
       const response = await fetch("/UsmanSagheer.pdf");
@@ -59,7 +58,7 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
   const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("freeconsultation")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -125,7 +124,7 @@ const Hero = () => {
             <button
               onClick={() =>
                 document
-                  .getElementById("contact")
+                  .getElementById("FreeConsultation")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="px-8 py-4 border border-white/30 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"

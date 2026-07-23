@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import { Menu, X, Moon, Sun } from 'lucide-react';
@@ -14,7 +13,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'FreeConsultation'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -45,7 +44,7 @@ const Header = () => {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'FreeConsultation', label: 'Free Consultation' }
   ];
 
   return (

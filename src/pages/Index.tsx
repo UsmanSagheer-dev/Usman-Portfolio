@@ -36,12 +36,13 @@ const Index = () => {
           <Education />
          
           <WorkProcess />
-          <Pricing />
+          {/* <Pricing /> */}
           <FAQ />
           {/* <CTA /> */}
-          <FreeConsultation />
-           <Testimonials />
-          <Contact />
+     
+           {/* <Testimonials /> */}
+                <FreeConsultation />
+          {/* <Contact /> */}
         </main>
         <Footer />
         <WhatsAppButton />

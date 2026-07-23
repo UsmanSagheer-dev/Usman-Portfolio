@@ -133,7 +133,7 @@ const Services = () => {
             Ready to start your project?
           </p>
           <a
-            href="#contact"
+            href="#FreeConsultation"
             className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/50"
           >
             Get In Touch

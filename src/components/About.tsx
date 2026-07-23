@@ -37,7 +37,10 @@ const About = () => {
                   My Journey
                 </h3>
                 <p className="text-white/90 leading-relaxed">
-                  I’m a Full-Stack Developer experienced in React.js, Next.js, React Native, Node.js and MongoDB. I’ve worked on real-world client projects in a software house where I focused on building clean, user-friendly and scalable applications. I enjoy solving problems, improving UI/UX, and continuously learning new technologies to grow as a developer.
+                I'm Usman Sagheer — a CS student and self-taught builder.
+While most developers learn by following tutorials, I learn by building. I've independently built complete systems like an HR Management System and a Learning Management System — from database design to deployment, everything done by me, alone.
+I believe the best way to grow is to find a real problem and build a real solution. That's my process. That's my passion.
+Currently pursuing my CS degree while working on projects that matter — and working towards building my own product someday.
                 </p>
 
               </div>
@@ -45,7 +48,7 @@ const About = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center rounded-xl hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-primary">1</div>
+                  <div className="text-3xl font-bold text-primary">2+</div>
                   <div className="text-white/80">Year Experience</div>
                 </div>
                 <div className="glass-card p-6 text-center rounded-xl hover:scale-105 transition-all duration-300">

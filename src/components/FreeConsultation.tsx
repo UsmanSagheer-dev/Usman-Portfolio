@@ -57,7 +57,7 @@ const FreeConsultation = () => {
     // Encode data for WhatsApp
     const message = `Free Consultation Request:\n\nName: ${encodeURIComponent(formData.name)}\nEmail: ${encodeURIComponent(formData.email)}\nPhone: ${encodeURIComponent(formData.phone)}\n\nProject Details:\n${encodeURIComponent(formData.projectDetails)}`;
     
-    window.open(`https://wa.me/923074715676?text=${message}`, '_blank');
+    window.open(`https://wa.me/923049469130?text=${message}`, '_blank');
     
     toast({
       title: "Request Sent!",
@@ -75,7 +75,7 @@ const FreeConsultation = () => {
   };
 
   return (
-    <section id="free-consultation" className="py-20 px-4 bg-background/50">
+    <section id="FreeConsultation" className="py-20 px-4 bg-background/50">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Info */}
