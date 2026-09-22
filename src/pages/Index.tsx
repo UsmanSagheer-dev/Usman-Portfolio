@@ -1,5 +1,4 @@
 import React from "react";
-import { ThemeProvider } from "../contexts/ThemeContext";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -23,31 +22,29 @@ const Index = () => {
   useScrollAnimation();
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Services />
-          <Skills />
-          <Experience />
-          <Education />
-         
-          <WorkProcess />
-          {/* <Pricing /> */}
-          <FAQ />
-          {/* <CTA /> */}
-     
-           {/* <Testimonials /> */}
-                <FreeConsultation />
-          {/* <Contact /> */}
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Services />
+        <Skills />
+        <Experience />
+        <Education />
+       
+        <WorkProcess />
+        {/* <Pricing /> */}
+        <FAQ />
+        {/* <CTA /> */}
+   
+         {/* <Testimonials /> */}
+              <FreeConsultation />
+        {/* <Contact /> */}
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 };
 

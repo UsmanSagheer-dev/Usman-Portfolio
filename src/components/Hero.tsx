@@ -8,21 +8,20 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    "Full-Stack Developer",
-    "React.js Developer",
-    "Mobile App Developer",
-    "UI/UX Enthusiast",
+    "Full Stack Software Developer",
+    "SaaS Product Builder",
+    "Web & Mobile Developer",
   ];
 
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch("/UsmanSagheer.pdf");
+      const response = await fetch("./Usman_Sagheer_Full_Stack_Software_Engineer_Resume.pdf");
       if (!response.ok) throw new Error("Network response was not ok");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "UsmanSagheer.pdf";
+      a.download = "Usman_Sagheer_Full_Stack_Software_Engineer_Resume.pdf";
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -58,7 +57,9 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
   const scrollToAbout = () => {
-    document.getElementById("freeconsultation")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("freeconsultation")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -100,10 +101,9 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-in-right">
-            Passionate about crafting beautiful, functional, and user-focused
-            digital experiences. With over a year of hands-on experience in web
-            and mobile development, I bring ideas to life through clean and
-            efficient code.
+            I build modern web and mobile applications, with a focus on scalable
+            backend systems, clean user experiences, and real-world SaaS
+            products.
           </p>
 
           {/* CTA Buttons */}

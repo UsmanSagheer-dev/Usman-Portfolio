@@ -20,13 +20,13 @@ const About = () => {
               <div className="relative">
                 <div className="w-80 h-80 mx-auto glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500">
                   <img
-                    src={IMAGES.PortfolioImage}
+                    src={IMAGES.NewPic}
                     alt="Usman Sagheer"
                     className=" object-center"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-500/20 rounded-full animate-float"></div>
+                {/* <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-500/20 rounded-full animate-float"></div> */}
               </div>
             </div>
 
@@ -37,12 +37,18 @@ const About = () => {
                   My Journey
                 </h3>
                 <p className="text-white/90 leading-relaxed">
-                I'm Usman Sagheer — a CS student and self-taught builder.
-While most developers learn by following tutorials, I learn by building. I've independently built complete systems like an HR Management System and a Learning Management System — from database design to deployment, everything done by me, alone.
-I believe the best way to grow is to find a real problem and build a real solution. That's my process. That's my passion.
-Currently pursuing my CS degree while working on projects that matter — and working towards building my own product someday.
+                  I'm Usman Sagheer, a Full Stack Software Developer and
+                  Computer Science student focused on building practical
+                  software products. I enjoy working across the entire
+                  development process — from designing databases and APIs to
+                  building responsive interfaces and shipping complete
+                  applications. My main focus is building real-world products.
+                  I'm currently developing Medicore, a pharmacy management SaaS
+                  designed to simplify everyday pharmacy operations. Alongside
+                  web development, I'm also exploring mobile application
+                  development and continuously improving my understanding of
+                  software engineering fundamentals.
                 </p>
-
               </div>
 
               {/* Stats */}

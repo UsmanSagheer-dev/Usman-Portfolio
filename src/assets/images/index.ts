@@ -20,6 +20,14 @@ import ExpenseImage from './expenseimage.jpg'
 import FacebookCloneImage from './facebookclone.png'
 import PetImage from './petimage.png'
 import LifeImage from './lifeimage.png'
+import CoverImage from './cover.jpg'
+import NewPic from './newpic.jpg'
+import PostgreSQLLogo from './PostgreSQLLogo.png'
+import PrismaLogo from './PrismaLogo.png'
+import JwtLogo from './JwtLogo.png'
+import ReduxLogo from './ReduxLogo.png'
+import ApiLogo from './ApiLogo.png'
+
 
 export const IMAGES = {
     PortfolioImage,
@@ -44,4 +52,12 @@ export const IMAGES = {
     FacebookCloneImage,
     PetImage,
     LifeImage,
+    CoverImage,
+    NewPic,
+    PostgreSQLLogo,
+    PrismaLogo,
+    JwtLogo,
+    ReduxLogo,
+    ApiLogo
 }
+    

@@ -1,291 +1,246 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Github, ArrowUp, ArrowDown } from "lucide-react";
+import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { IMAGES } from "@/assets/images";
+
+const projects = [
+  {
+    id: "medicore",
+    title: "Medicore — Hospital & Pharmacy Management System",
+    description:
+      "A full-stack healthcare management platform designed to manage hospital and pharmacy operations with role-based access, patient workflows, prescriptions, inventory, billing, and pharmacy sales.",
+    image: IMAGES.CoverImage,
+
+    technologies: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Redux",
+      "JWT",
+    ],
+
+    github:
+      "https://github.com/UsmanSagheer-dev/medicore-hms",
+
+    live: "https://medicore-hms.vercel.app/",
+  },
+];
 
 const Projects = () => {
   const navigate = useNavigate();
 
-  const projects = [
-    {
-      id: 1,
-      title: "HR Management System",
-      description:
-        "A comprehensive HR Management System built with Next.js and MongoDB. It includes employee attendance tracking, leave management, payroll management, and authentication features. The system helps organizations streamline their HR processes efficiently.",
-      image: IMAGES.HrManagementImage,
-      technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Redux"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/hrmanagement",
-      liveUrl: "https://hrmanagement-i6491tv26-learnwithusmansagheers-projects.vercel.app",
-      featured: true,
-      metrics: {
-        users: "500+",
-        impact: "40% faster HR processes",
-        performance: "99.9% uptime",
-        deployment: "Vercel + MongoDB Atlas"
-      },
-      timeline: "Jan 2024 - Mar 2024",
-      role: "Full Stack Developer",
-      teamSize: "Solo Project"
-    },
-    {
-      id: 2,
-      title: "Expense Tracker",
-      description:
-        "A modern web-based Expense Tracker that helps users manage their daily, weekly, and monthly spending. Built with React.js, it stores data securely in local storage and allows users to download detailed expense reports in PDF format. The app includes features like category-wise tracking, dynamic charts, and a clean, responsive UI for seamless use across all devices.",
-      image: IMAGES.ExpenseImage,
-      technologies: ["React.js", "Tailwind CSS", "Local Storage", "jsPDF"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/finpal-pdf-reports",
-      liveUrl:
-        "https://finpal-pdf-reports-l-git-a717e0-learnwithusmansagheers-projects.vercel.app/",
-      featured: true,
-      metrics: {
-        users: "1,200+",
-        impact: "35% better spending habits",
-        performance: "<100ms load time",
-        deployment: "Vercel"
-      },
-      timeline: "Feb 2024 - Apr 2024",
-      role: "Full Stack Developer",
-      teamSize: "Solo Project"
-    },
-    {
-      id: 3,
-      title: "Facebook Clone",
-      description:
-        "A fully functional social media web application built with React.js, Firebase, and Redux Toolkit. It allows users to create and delete their own posts, while viewing posts from other users in real-time. The app includes user authentication, responsive design, and seamless state management for a smooth, interactive experience.",
-      image: IMAGES.FacebookCloneImage,
-      technologies: ["React.js", "Firebase", "Redux Toolkit", "Tailwind CSS"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/Facebool-testing",
-      liveUrl: "https://facebool-testing.vercel.app/signup",
-      featured: false,
-      metrics: {
-        users: "300+",
-        impact: "Real-time social interaction",
-        performance: "<200ms response time",
-        deployment: "Vercel + Firebase"
-      },
-      timeline: "Mar 2024 - May 2024",
-      role: "Full Stack Developer",
-      teamSize: "Solo Project"
-    },
-    {
-      id: 4,
-      title: "Pet Adoption App",
-      description:
-        "A pet adoption platform that helps shelters list pets and connect them with loving homes. Built with React and Firebase for storage, authentication, and image uploads.",
-      image: IMAGES.PetImage,
-      technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/petadoptionApp",
-      liveUrl: "https://petadoption-app.vercel.app",
-      featured: false,
-      metrics: {
-        users: "50+ shelters",
-        impact: "200+ pets adopted",
-        performance: "95% image optimization",
-        deployment: "Vercel + Firebase"
-      },
-      timeline: "Apr 2024 - Jun 2024",
-      role: "Full Stack Developer",
-      teamSize: "Solo Project"
-    },
-     {
-      id: 5,
-      title: "Life Management App",
-      description:
-        "A life management application that helps users track their daily tasks, set goals, and manage their time effectively. Built with React and Firebase for real-time data synchronization.",
-      image: IMAGES.LifeImage,
-      technologies: ["React.js", "Firebase", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/lifemsync",
-      liveUrl: "https://lifemsync.vercel.app",
-      featured: false,
-      metrics: {
-        users: "800+",
-        impact: "60% productivity increase",
-        performance: "Offline-first architecture",
-        deployment: "Vercel + Firebase"
-      },
-      timeline: "May 2024 - Jul 2024",
-      role: "Full Stack Developer",
-      teamSize: "Solo Project"
-    },
-    {
-      id: 6,
-      title: "Hospital Management System",
-      description:
-        "A comprehensive hospital management platform with multi-role architecture including Super Admin, Hospital Admin, Doctors, Receptionists, and Pharmacy management. Features global medicine database, patient workflow automation, prescription management, and complete organization-level data isolation.",
-      image: IMAGES.HrManagementImage,
-      technologies: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "Firebase"],
-      githubUrl: "https://github.com/UsmanSagheer-dev/hospital-management-system",
-      liveUrl: "https://hospital-management-system.vercel.app",
-      featured: true,
-      metrics: {
-        users: "50+ hospitals",
-        impact: "70% faster hospital operations",
-        performance: "99.95% uptime",
-        deployment: "AWS + MongoDB Atlas"
-      },
-      timeline: "Aug 2024 - Present",
-      role: "Full Stack Developer & System Architect",
-      teamSize: "Team Project"
-    },
-  ];
-
   return (
-    <section id="projects" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Title */}
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
-              Featured Projects
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            <p className="text-white/80 text-lg mt-6 max-w-2xl mx-auto">
-              Here are some of my recent projects that showcase my skills and
-              experience
-            </p>
-          </div>
+    <section
+      id="projects"
+      className="py-24 px-4 bg-background transition-colors duration-300"
+    >
+      <div className="max-w-7xl mx-auto px-2 lg:px-4">
 
-          {/* Projects Grid */}
-          <div className="space-y-12">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className={`project-card animate-on-scroll border border-white/30 cursor-pointer ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex flex-col md:flex gap-8 items-center`}
-                onClick={() => navigate(`/project/${project.id}`)}
-              >
-                {/* Project Image */}
-                <div className="md:w-1/2">
-                  <div className="relative group overflow-hidden rounded-xl">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="flex space-x-4">
-                        <a
-                          href={project.githubUrl}
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
-                          aria-label="View GitHub Repository"
-                        >
-                          <Github size={24} className="text-white" />
-                        </a>
-                        <a
-                          href={project.liveUrl}
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
-                          aria-label="View Live Demo"
-                        >
-                          <ArrowUp size={24} className="text-white" />
-                        </a>
-                      </div>
-                    </div>
-                    {project.featured && (
-                      <div className="absolute top-4 left-4 px-3 py-1 bg-primary/80 backdrop-blur-sm text-white text-sm font-semibold rounded-full">
-                        Featured
-                      </div>
-                    )}
-                  </div>
-                </div>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <p className="text-primary font-semibold uppercase tracking-wider mb-3">
+            My Work
+          </p>
 
-                {/* Project Content */}
-                <div className="md:w-1/2 space-y-6">
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-white/90 leading-relaxed text-lg">
-                      {project.description}
-                    </p>
-                  </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5">
+            Featured Project
+          </h2>
 
-                  {/* Metrics */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="glass-card p-3 rounded-lg border border-white/30">
-                      <p className="text-xs text-white/60 mb-1">Users</p>
-                      <p className="text-lg font-bold text-primary">{project.metrics.users}</p>
-                    </div>
-                    <div className="glass-card p-3 rounded-lg border border-white/30">
-                      <p className="text-xs text-white/60 mb-1">Impact</p>
-                      <p className="text-sm font-semibold text-white">{project.metrics.impact}</p>
-                    </div>
-                    <div className="glass-card p-3 rounded-lg border border-white/30">
-                      <p className="text-xs text-white/60 mb-1">Performance</p>
-                      <p className="text-sm font-semibold text-white">{project.metrics.performance}</p>
-                    </div>
-                    <div className="glass-card p-3 rounded-lg border border-white/30">
-                      <p className="text-xs text-white/60 mb-1">Deployment</p>
-                      <p className="text-sm font-semibold text-white">{project.metrics.deployment}</p>
-                    </div>
-                  </div>
+          <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
+            A real-world SaaS project focused on solving practical healthcare
+            and pharmacy management problems.
+          </p>
+        </div>
 
-                  {/* Timeline & Role */}
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-white/60">Timeline:</span>
-                      <span className="text-white font-medium">{project.timeline}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-white/60">Role:</span>
-                      <span className="text-white font-medium">{project.role}</span>
-                    </div>
-                  </div>
+        {/* Project Card */}
+        <div className="max-w-5xl mx-auto">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              onClick={() => navigate(`/project/${project.id}`)}
+              className="
+                group
+                cursor-pointer
+                overflow-hidden
+                rounded-2xl
+                border
+                border-border
+                bg-card
+                transition-all
+                duration-500
+                hover:border-primary/50
+                hover:-translate-y-2
+                hover:shadow-2xl
+                hover:shadow-primary/10
+              "
+            >
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-3">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-4 py-2 glass-card text-sm font-medium text-primary hover:bg-primary/20 transition-all duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+              {/* Image */}
+              <div className="relative overflow-hidden h-[280px] md:h-[420px]">
 
-                  {/* Project Links */}
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.githubUrl}
-                      className="flex items-center space-x-2 px-6 py-3 glass-card hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                    >
-                      <Github size={20} />
-                      <span>Code</span>
-                    </a>
-                    <a
-                      href={project.liveUrl}
-                      className="flex items-center space-x-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                    >
-                      <ArrowUp size={20} />
-                      <span>Live Demo</span>
-                    </a>
-                  </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    group-hover:scale-105
+                  "
+                />
+
+                {/* Image Overlay */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-black/70
+                    via-black/10
+                    to-transparent
+                    opacity-80
+                  "
+                />
+
+                {/* Featured Badge */}
+                <div className="absolute top-5 left-5">
+                  <span className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-lg">
+                    Featured Project
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* More Projects CTA */}
-          <div className="text-center mt-16 animate-on-scroll">
-            <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4 text-primary">
-                Want to see more?
-              </h3>
-              <p className="text-white/90 leading-relaxed mb-6">
-                These are just a few highlights from my portfolio. I have more
-                projects and experiments available on my GitHub profile.
-              </p>
-              <a
-                href="https://github.com/UsmanSagheer-dev"
-                className="inline-flex items-center space-x-2 px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
-                <Github size={20} />
-                <span>View All Projects</span>
-              </a>
+              {/* Content */}
+              <div className="p-7 md:p-10">
+
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+
+                  <div className="flex-1">
+
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-muted-foreground leading-7 max-w-3xl">
+                      {project.description}
+                    </p>
+
+                  </div>
+
+                  {/* External Links */}
+                  <div
+                    className="flex items-center gap-3 shrink-0"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        flex
+                        items-center
+                        justify-center
+                        w-11
+                        h-11
+                        rounded-lg
+                        border
+                        border-border
+                        text-muted-foreground
+                        hover:text-foreground
+                        hover:bg-muted
+                        transition
+                      "
+                      aria-label="View GitHub Repository"
+                    >
+                      <Github size={20} />
+                    </a>
+
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        flex
+                        items-center
+                        justify-center
+                        w-11
+                        h-11
+                        rounded-lg
+                        border
+                        border-border
+                        text-muted-foreground
+                        hover:text-foreground
+                        hover:bg-muted
+                        transition
+                      "
+                      aria-label="View Live Project"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-7">
+                  {project.technologies.map((technology) => (
+                    <span
+                      key={technology}
+                      className="
+                        px-3
+                        py-1.5
+                        rounded-md
+                        bg-muted
+                        border
+                        border-border
+                        text-sm
+                        text-muted-foreground
+                        transition-colors
+                        hover:text-foreground
+                      "
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Details Button */}
+                <div className="mt-8">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/project/${project.id}`);
+                    }}
+                    className="
+                      inline-flex
+                      items-center
+                      gap-2
+                      px-6
+                      py-3
+                      rounded-lg
+                      bg-primary
+                      hover:bg-primary/90
+                      text-primary-foreground
+                      font-semibold
+                      transition-all
+                      duration-300
+                      hover:gap-3
+                    "
+                  >
+                    View Project Details
+                    <ArrowRight size={18} />
+                  </button>
+                </div>
+
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

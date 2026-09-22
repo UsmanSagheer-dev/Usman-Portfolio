@@ -43,8 +43,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     // Remove existing theme classes
     root.classList.remove('light', 'dark');
     
-    // Add current theme class
-    root.classList.add(theme);
+    // Add current theme class (only add 'light' class for light mode, dark is default)
+    if (theme === 'light') {
+      root.classList.add('light');
+    }
     
     // Add smooth transition class during theme change
     root.style.transition = 'background-color 0.3s ease, color 0.3s ease';
