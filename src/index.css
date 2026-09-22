@@ -79,6 +79,7 @@
     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
     min-height: 100vh;
     transition: all 0.3s ease;
+    overflow-x: hidden;
   }
 
   .light body {
@@ -87,6 +88,12 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Prevent horizontal overflow on mobile */
+  img, video, canvas {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -341,6 +348,17 @@
   @apply text-gray-800;
 }
 
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+}
+
 /* Testimonials */
 .testimonials-scroll {
   position: relative;
@@ -398,5 +416,27 @@
 
   .testimonials-column {
     animation: scroll-vertical 20s linear infinite;
+  }
+
+  /* Mobile-specific adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 13px;
+  }
+
+  /* Reduced padding for very small screens */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

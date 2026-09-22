@@ -15,7 +15,9 @@ const Hero = () => {
 
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch("./Usman_Sagheer_Full_Stack_Software_Engineer_Resume.pdf");
+      const response = await fetch(
+        "./Usman_Sagheer_Full_Stack_Software_Engineer_Resume.pdf",
+      );
       if (!response.ok) throw new Error("Network response was not ok");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
@@ -57,9 +59,7 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
   const scrollToAbout = () => {
-    document
-      .getElementById("freeconsultation")
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -124,7 +124,7 @@ const Hero = () => {
             <button
               onClick={() =>
                 document
-                  .getElementById("FreeConsultation")
+                  .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="px-8 py-4 border border-white/30 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"

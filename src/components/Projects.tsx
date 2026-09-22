@@ -22,8 +22,7 @@ const projects = [
       "JWT",
     ],
 
-    github:
-      "https://github.com/UsmanSagheer-dev/medicore-hms",
+    github: "https://github.com/UsmanSagheer-dev/medicore-hms",
 
     live: "https://medicore-hms.vercel.app/",
   },
@@ -35,21 +34,20 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 px-4 bg-background transition-colors duration-300"
+      className="py-16 sm:py-20 md:py-24 px-4 bg-background transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-2 lg:px-4">
-
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold uppercase tracking-wider mb-3">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-primary font-semibold uppercase tracking-wider mb-2 sm:mb-3 text-sm sm:text-base">
             My Work
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-5">
             Featured Project
           </h2>
 
-          <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
+          <p className="max-w-2xl mx-auto text-muted-foreground text-sm sm:text-base md:text-lg px-2">
             A real-world SaaS project focused on solving practical healthcare
             and pharmacy management problems.
           </p>
@@ -77,10 +75,8 @@ const Projects = () => {
                 hover:shadow-primary/10
               "
             >
-
               {/* Image */}
-              <div className="relative overflow-hidden h-[280px] md:h-[420px]">
-
+              <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[420px]">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -116,20 +112,16 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-7 md:p-10">
-
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-
+              <div className="p-5 sm:p-7 md:p-10">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 sm:gap-6">
                   <div className="flex-1">
-
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4">
                       {project.title}
                     </h3>
 
-                    <p className="text-muted-foreground leading-7 max-w-3xl">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-6 sm:leading-7 max-w-3xl">
                       {project.description}
                     </p>
-
                   </div>
 
                   {/* External Links */}
@@ -137,7 +129,6 @@ const Projects = () => {
                     className="flex items-center gap-3 shrink-0"
                     onClick={(e) => e.stopPropagation()}
                   >
-
                     <a
                       href={project.github}
                       target="_blank"
@@ -183,7 +174,6 @@ const Projects = () => {
                     >
                       <ExternalLink size={20} />
                     </a>
-
                   </div>
                 </div>
 
@@ -237,7 +227,6 @@ const Projects = () => {
                     <ArrowRight size={18} />
                   </button>
                 </div>
-
               </div>
             </div>
           ))}

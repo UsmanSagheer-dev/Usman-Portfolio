@@ -310,8 +310,8 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-[#0b1120] text-white">
       <Header />
 
-      <main className="pt-28 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <main className="pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back Button */}
           <button
@@ -323,36 +323,37 @@ const ProjectDetail = () => {
               text-gray-400
               hover:text-white
               transition
-              mb-8
+              mb-6 sm:mb-8
+              text-sm sm:text-base
             "
           >
-            <ArrowLeft size={20} />
+            <ArrowLeft size={18} className="sm:size-20" />
             Back to Projects
           </button>
 
           {/* Hero */}
-          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <section className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16 md:mb-20">
 
             {/* Text */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-5">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-5">
                 Featured SaaS Project
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
                 {project.title}
               </h1>
 
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-300 mb-4 sm:mb-6">
                 {project.subtitle}
               </h2>
 
-              <p className="text-lg text-gray-400 leading-8 mb-8">
+              <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-6 sm:leading-8 mb-6 sm:mb-8">
                 {project.description}
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
 
                 <a
                   href={project.github}
@@ -362,8 +363,8 @@ const ProjectDetail = () => {
                     inline-flex
                     items-center
                     gap-2
-                    px-6
-                    py-3
+                    px-4 sm:px-6
+                    py-2.5 sm:py-3
                     rounded-lg
                     border
                     border-white/10
@@ -371,9 +372,10 @@ const ProjectDetail = () => {
                     hover:bg-white/10
                     transition
                     font-semibold
+                    text-sm sm:text-base
                   "
                 >
-                  <Github size={19} />
+                  <Github size={16} className="sm:size-19" />
                   View Code
                 </a>
 
@@ -385,16 +387,17 @@ const ProjectDetail = () => {
                     inline-flex
                     items-center
                     gap-2
-                    px-6
-                    py-3
+                    px-4 sm:px-6
+                    py-2.5 sm:py-3
                     rounded-lg
                     bg-primary
                     hover:bg-primary/90
                     transition
                     font-semibold
+                    text-sm sm:text-base
                   "
                 >
-                  <ExternalLink size={19} />
+                  <ExternalLink size={16} className="sm:size-19" />
                   Live Demo
                 </a>
 
@@ -406,7 +409,7 @@ const ProjectDetail = () => {
               <img
                 src={project.image}
                 alt="Medicore Hospital and Pharmacy Management System"
-                className="w-full h-[300px] md:h-[430px] object-cover"
+                className="w-full h-[200px] sm:h-[300px] md:h-[430px] object-cover"
               />
             </div>
           </section>
