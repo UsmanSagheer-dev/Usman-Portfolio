@@ -16,7 +16,7 @@ const Hero = () => {
   const handleDownloadCV = async () => {
     try {
       const response = await fetch(
-        "./Usman_Sagheer_Full_Stack_Software_Engineer_Resume.pdf",
+        "/Usman_Sagheer_Full_Stack_Software_Engineer_Resume .pdf",
       );
       if (!response.ok) throw new Error("Network response was not ok");
       const blob = await response.blob();
